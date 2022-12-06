@@ -8,14 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    private var fruits = ModelData().fruits
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        FruitRow(fruit: fruits[0])
     }
 }
 
