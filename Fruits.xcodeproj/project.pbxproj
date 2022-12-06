@@ -51,6 +51,7 @@
 		5D69FC7B293F45960068B6E2 /* Fruits */ = {
 			isa = PBXGroup;
 			children = (
+				5DCE8090293F68EC0050CE7F /* Model */,
 				5D69FC7C293F45960068B6E2 /* FruitsApp.swift */,
 				5D69FC7E293F45960068B6E2 /* ContentView.swift */,
 				5D69FC80293F45990068B6E2 /* Assets.xcassets */,
@@ -65,6 +66,13 @@
 				5D69FC83293F45990068B6E2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5DCE8090293F68EC0050CE7F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
