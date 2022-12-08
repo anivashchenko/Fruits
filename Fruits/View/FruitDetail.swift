@@ -8,30 +8,49 @@
 import SwiftUI
 
 struct FruitDetail: View {
-    
+        
     var fruit: Fruit
     
     var body: some View {
         ZStack {
-            Image("Banana")
-                .resizable()
-                .frame(maxWidth: .infinity)
-                .brightness(0.5)
-            
-            VStack(alignment: .leading) {
+            GeometryReader { geometry in
+                VStack {
+                    Image("BananaT")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: geometry.size.width)
+                        .clipped()
+                        .ignoresSafeArea()
+                }
+            }
+                        
+            VStack {
+                Spacer()
+                Spacer()
+                
                 Text(fruit.name)
-                    .font(.title)
+                    .font(.largeTitle)
+                    .bold()
                     .foregroundColor(.primary)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 6)
                     .background(.ultraThinMaterial)
+                    .cornerRadius(10)
+                    .padding(.horizontal, 20)
+               
+                Text(fruit.description)
+                    .font(.callout)
+                    .foregroundColor(.white)
+                    .padding(.horizontal)
+                    .padding(20)
+                    .multilineTextAlignment(.center)
+                    .background(.primary.opacity(0.8))
+                    .cornerRadius(10)
+                    .padding(20)
+                    .textSelection(.enabled)
                 
                 Spacer()
                 
-                Divider()
-                Text(fruit.description)
-                    .font(.footnote)
-                    .frame(width: .infinity)
-                    .multilineTextAlignment(.center)
-                    .background(.ultraThinMaterial)
             }
         }
     }
