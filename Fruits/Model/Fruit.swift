@@ -12,5 +12,14 @@ struct Fruit: Decodable, Hashable, Identifiable {
     var name: String
     var description: String
     var imageURL: String
-    var country: String
+    var mainland: String
+    var color: Color
+    
+    enum Color: String, Decodable {
+        case yellow
+        case orange
+        case red
+        case green
+        case allColor
+    }
 }

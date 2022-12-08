@@ -13,32 +13,18 @@ struct FruitRow: View {
     
     var body: some View {
         HStack {
-            let url = URL(string: fruit.imageURL)
-
-            AsyncImage(url: url) { phase in
-                switch phase {
-                case .empty:
-                    ProgressView()
-                case .success(let returnedImage):
-                    returnedImage
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 50, height: 50)
-                case .failure:
-                    Image(systemName: "questionmark.square.dashed")
-                        .font(.headline)
-                default:
-                    Image(systemName: "questionmark.square.dashed")
-                        .font(.headline)
-                }
-            }
+            Image(fruit.name)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 50, height: 50)
+                .padding(10)
                 
-            VStack {
+            VStack(alignment: .leading) {
                 Text(fruit.name)
-                    .font(.headline)
+                    .font(.title)
                     .foregroundColor(.primary)
                 Text(fruit.mainland)
-                    .font(.caption)
+                    .font(.subheadline)
                     .foregroundColor(.secondary)
             }
             
@@ -48,11 +34,10 @@ struct FruitRow: View {
 }
 
 struct FruitRow_Previews: PreviewProvider {
-    static var fruits = ModelData().fruits
-    
     static var previews: some View {
-        FruitRow(fruit: fruits[0])
-            .previewLayout(.fixed(width: 300, height: 70))
+        FruitRow(fruit: ModelData().fruits[1])
+            .previewLayout(.fixed(width: 300, height: 50))
+            .environmentObject(ModelData())
     }
     
 }
