@@ -1,6 +1,6 @@
 //
 //  Food.swift
-//  Fruits
+//  ShopList
 //
 //  Created by Анастасія on 06.12.2022.
 //
@@ -15,6 +15,7 @@ struct Food: Decodable, Hashable, Identifiable {
     var mainland: String
     var color: Color
     var countValue: Int
+    var isAddedToList: Bool
     
     enum Color: String, Decodable {
         case yellow

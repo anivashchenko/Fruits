@@ -19,9 +19,9 @@ struct FoodGrid: View {
                 .frame(width: 100, height: 100)
                 .padding(10)
                 .overlay(alignment: .bottomTrailing) {
-                    Image(systemName: "plus.circle.fill")
+                    Image(systemName: food.isAddedToList ? "checkmark.circle.fill" : "plus.circle.fill")
                         .font(.largeTitle)
-                        .symbolRenderingMode(.hierarchical)
+                        .symbolRenderingMode(food.isAddedToList ? .multicolor : .hierarchical)
                         .padding(10)
                         .offset(x: 10, y: 10)
                 }
