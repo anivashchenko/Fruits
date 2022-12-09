@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5D69FC7D293F45960068B6E2 /* FruitsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FC7C293F45960068B6E2 /* FruitsApp.swift */; };
+		5D487C3D2943477800CA2ABF /* BerryData.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D487C3C2943477800CA2ABF /* BerryData.json */; };
+		5D487C3F2943478E00CA2ABF /* FruitData.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D487C3E2943478E00CA2ABF /* FruitData.json */; };
+		5D487C412943479500CA2ABF /* VegData.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D487C402943479500CA2ABF /* VegData.json */; };
+		5D69FC7D293F45960068B6E2 /* ShopListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FC7C293F45960068B6E2 /* ShopListApp.swift */; };
 		5D69FC7F293F45960068B6E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FC7E293F45960068B6E2 /* ContentView.swift */; };
 		5D69FC81293F45990068B6E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D69FC80293F45990068B6E2 /* Assets.xcassets */; };
 		5D69FC84293F45990068B6E2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D69FC83293F45990068B6E2 /* Preview Assets.xcassets */; };
@@ -17,11 +20,8 @@
 		5D91312F29421FAD00F06EF9 /* FoodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D91312E29421FAD00F06EF9 /* FoodCategory.swift */; };
 		5D913131294228A100F06EF9 /* FoodAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D913130294228A100F06EF9 /* FoodAdd.swift */; };
 		5D9D20AC294253970008CB0B /* FoodStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D20AB294253970008CB0B /* FoodStepper.swift */; };
-		5D9D20AE29426A860008CB0B /* BerryData.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D9D20AD29426A860008CB0B /* BerryData.json */; };
-		5D9D20B029426AA00008CB0B /* VegData.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D9D20AF29426AA00008CB0B /* VegData.json */; };
 		5D9D20B2294275560008CB0B /* MyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D20B1294275560008CB0B /* MyTabView.swift */; };
 		5D9D20B4294276E80008CB0B /* FoodBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D20B3294276E80008CB0B /* FoodBasket.swift */; };
-		5DAFE1F12940B2DB00C5AFA1 /* FruitData.json in Resources */ = {isa = PBXBuildFile; fileRef = 5DAFE1F02940B2DB00C5AFA1 /* FruitData.json */; };
 		5DCE8092293F6CF80050CE7F /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE8091293F6CF80050CE7F /* ModelData.swift */; };
 		5DCE8094293F6DCA0050CE7F /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE8093293F6DCA0050CE7F /* Food.swift */; };
 		5DCE8097293F76940050CE7F /* FruitRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE8096293F76940050CE7F /* FruitRow.swift */; };
@@ -29,8 +29,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D487C3C2943477800CA2ABF /* BerryData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BerryData.json; sourceTree = "<group>"; };
+		5D487C3E2943478E00CA2ABF /* FruitData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FruitData.json; sourceTree = "<group>"; };
+		5D487C402943479500CA2ABF /* VegData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = VegData.json; sourceTree = "<group>"; };
 		5D69FC79293F45960068B6E2 /* ShopList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopList.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D69FC7C293F45960068B6E2 /* FruitsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsApp.swift; sourceTree = "<group>"; };
+		5D69FC7C293F45960068B6E2 /* ShopListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListApp.swift; sourceTree = "<group>"; };
 		5D69FC7E293F45960068B6E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5D69FC80293F45990068B6E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D69FC83293F45990068B6E2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -40,11 +43,8 @@
 		5D91312E29421FAD00F06EF9 /* FoodCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategory.swift; sourceTree = "<group>"; };
 		5D913130294228A100F06EF9 /* FoodAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAdd.swift; sourceTree = "<group>"; };
 		5D9D20AB294253970008CB0B /* FoodStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStepper.swift; sourceTree = "<group>"; };
-		5D9D20AD29426A860008CB0B /* BerryData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = BerryData.json; path = Fruits/BerryData.json; sourceTree = SOURCE_ROOT; };
-		5D9D20AF29426AA00008CB0B /* VegData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = VegData.json; path = Fruits/VegData.json; sourceTree = SOURCE_ROOT; };
 		5D9D20B1294275560008CB0B /* MyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabView.swift; sourceTree = "<group>"; };
 		5D9D20B3294276E80008CB0B /* FoodBasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBasket.swift; sourceTree = "<group>"; };
-		5DAFE1F02940B2DB00C5AFA1 /* FruitData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = FruitData.json; path = Fruits/FruitData.json; sourceTree = SOURCE_ROOT; };
 		5DCE8091293F6CF80050CE7F /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		5DCE8093293F6DCA0050CE7F /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		5DCE8096293F76940050CE7F /* FruitRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitRow.swift; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 			children = (
 				5D69FC80293F45990068B6E2 /* Assets.xcassets */,
 				5D69FC7E293F45960068B6E2 /* ContentView.swift */,
-				5D69FC7C293F45960068B6E2 /* FruitsApp.swift */,
+				5D69FC7C293F45960068B6E2 /* ShopListApp.swift */,
 				5DCE8090293F68EC0050CE7F /* Model */,
 				5D69FC82293F45990068B6E2 /* Preview Content */,
 				5DCE8098293F8F3A0050CE7F /* Resources */,
@@ -137,9 +137,9 @@
 		5DCE8098293F8F3A0050CE7F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5D9D20AD29426A860008CB0B /* BerryData.json */,
-				5DAFE1F02940B2DB00C5AFA1 /* FruitData.json */,
-				5D9D20AF29426AA00008CB0B /* VegData.json */,
+				5D487C3C2943477800CA2ABF /* BerryData.json */,
+				5D487C402943479500CA2ABF /* VegData.json */,
+				5D487C3E2943478E00CA2ABF /* FruitData.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -202,10 +202,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D9D20B029426AA00008CB0B /* VegData.json in Resources */,
-				5D9D20AE29426A860008CB0B /* BerryData.json in Resources */,
+				5D487C412943479500CA2ABF /* VegData.json in Resources */,
+				5D487C3F2943478E00CA2ABF /* FruitData.json in Resources */,
 				5D69FC84293F45990068B6E2 /* Preview Assets.xcassets in Resources */,
-				5DAFE1F12940B2DB00C5AFA1 /* FruitData.json in Resources */,
+				5D487C3D2943477800CA2ABF /* BerryData.json in Resources */,
 				5D69FC81293F45990068B6E2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,7 +225,7 @@
 				5D91312D29421E9B00F06EF9 /* FoodGrid.swift in Sources */,
 				5D9071D129409729004E0F37 /* FruitDetail.swift in Sources */,
 				5D896B5F2941EED0006B78D1 /* FilteredViewByColors.swift in Sources */,
-				5D69FC7D293F45960068B6E2 /* FruitsApp.swift in Sources */,
+				5D69FC7D293F45960068B6E2 /* ShopListApp.swift in Sources */,
 				5D9D20AC294253970008CB0B /* FoodStepper.swift in Sources */,
 				5DCE8097293F76940050CE7F /* FruitRow.swift in Sources */,
 				5D913131294228A100F06EF9 /* FoodAdd.swift in Sources */,
@@ -358,7 +358,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Fruits/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ShopList/Preview Content\"";
 				DEVELOPMENT_TEAM = CCD7NJ92C7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -372,7 +372,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = aivashchenko.FruitsProj;
+				PRODUCT_BUNDLE_IDENTIFIER = aivashchenko.ShopList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -387,7 +387,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Fruits/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ShopList/Preview Content\"";
 				DEVELOPMENT_TEAM = CCD7NJ92C7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -401,7 +401,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = aivashchenko.FruitsProj;
+				PRODUCT_BUNDLE_IDENTIFIER = aivashchenko.ShopList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

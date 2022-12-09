@@ -1,6 +1,6 @@
 //
 //  ModelData.swift
-//  Fruits
+//  ShopList
 //
 //  Created by Анастасія on 06.12.2022.
 //
