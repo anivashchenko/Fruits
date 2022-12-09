@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Apple",
+        "name": "Potato",
         "description": "An apple is a sweet, edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus.",
         "imageURL": "https://www.pngwing.com/en/free-png-zfoiv/download",
         "mainland": "Europe",
@@ -11,7 +11,7 @@
     },
     {
         "id": 2,
-        "name": "Banana",
+        "name": "Tomato",
         "description": "A banana is an edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa. In some countries, bananas used for cooking may be called plantains, distinguishing them from dessert banana",
         "imageURL": "http://www.pngall.com/wp-content/uploads/2016/04/Banana-PNG.png",
         "mainland": "Africa",
@@ -21,7 +21,7 @@
     },
     {
         "id": 3,
-        "name": "Cherry",
+        "name": "Carrot",
         "description": "A cherry is the fruit of many plants of the genus Prunus, and is a fleshy drupe. Commercial cherries are obtained from cultivars of several species, such as the sweet Prunus avium and the sour Prunus cerasus.",
         "imageURL":"https://cdn.shopify.com/s/files/1/0610/2881/products/cherries.jpg?v=1446676415",
         "mainland":"Europe",
@@ -31,7 +31,7 @@
     },
     {
         "id": 4,
-        "name": "Feijoa",
+        "name": "Cucumber",
         "description": "An apple is a sweet, edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus.",
         "imageURL":"https://w7.pngwing.com/pngs/954/389/png-transparent-feijoa-key-lime-persian-lime-lemon-lemon-thumbnail.png",
         "mainland":"Africa",
@@ -41,7 +41,7 @@
     },
     {
         "id": 5,
-        "name": "Kiwi",
+        "name": "Zucchini",
         "description": "An apple is a sweet, edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus.",
         "imageURL":"https://w7.pngwing.com/pngs/945/573/png-transparent-kiwi-fruit-illustration-juice-smoothie-kiwifruit-kiwi-natural-foods-food-citrus-thumbnail.png",
         "mainland":"Africa",
@@ -51,7 +51,7 @@
     },
     {
         "id": 6,
-        "name": "Lemon",
+        "name": "Onion",
         "description": "The tomato is the edible, often red, berry of the plant Solanum lycopersicum, commonly known as a tomato plant. The species originated in western South America and Central America.",
         "imageURL":"https://w7.pngwing.com/pngs/486/920/png-transparent-lemon-fruit-lemon-natural-foods-food-citrus-thumbnail.png",
         "mainland":"Africa",
@@ -61,7 +61,7 @@
     },
     {
         "id": 7,
-        "name": "Orange",
+        "name": "Garlic",
         "description": "An apple is a sweet, edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus.",
         "imageURL":"https://w7.pngwing.com/pngs/9/79/png-transparent-juice-smoothie-pineapple-fruit-canning-pineapple-fruit-pineapple-orange-pineapple-fruit-natural-foods-food-orange-thumbnail.png",
         "mainland":"Asia",
@@ -71,7 +71,7 @@
     },
     {
         "id": 8,
-        "name": "Peach",
+        "name": "Pepper",
         "description": "The peach is a deciduous tree native to the region of Northwest China between the Tarim Basin and the north slopes of the Kunlun Mountains, where it was first domesticated and cultivated. It bears an edible juicy fruit called a peach or a nectarine.",
         "imageURL":"http://icons.iconarchive.com/icons/artbees/paradise-fruits/256/Peach-icon.png",
         "mainland":"China",
@@ -81,7 +81,7 @@
     },
     {
         "id": 9,
-        "name": "Persimmon",
+        "name": "Cabbage",
         "description": "An apple is a sweet, edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus.",
         "imageURL":"https://images.freshop.com/00852201002228/ad2f58915e3267700906f1025ef8917f_medium.png",
         "mainland":"Asia",
@@ -91,7 +91,7 @@
     },
     {
         "id": 10,
-        "name": "Pineapple",
+        "name": "Cauliflower",
         "description": "An apple is a sweet, edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus.",
         "imageURL":"https://images.freshop.com/00852201002228/ad2f58915e3267700906f1025ef8917f_medium.png",
         "mainland":"Asia",
@@ -101,17 +101,17 @@
     },
     {
         "id": 11,
-        "name": "Lime",
+        "name": "Broccoli",
         "description": "An apple is a sweet, edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus.",
         "imageURL":"https://images.freshop.com/00852201002228/ad2f58915e3267700906f1025ef8917f_medium.png",
         "mainland":"Asia",
-        "color": "yellow",
+        "color": "orange",
         "countValue": 0,
         "isAddedToList": false
     },
     {
         "id": 12,
-        "name": "Grape",
+        "name": "Mushroom",
         "description": "An apple is a sweet, edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus.",
         "imageURL":"https://images.freshop.com/00852201002228/ad2f58915e3267700906f1025ef8917f_medium.png",
         "mainland":"Asia",
@@ -119,5 +119,4 @@
         "countValue": 0,
         "isAddedToList": false
     }
-    
 ]

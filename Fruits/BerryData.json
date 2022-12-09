@@ -1,0 +1,33 @@
+[
+    {
+        "id": 1,
+        "name": "Raspberry",
+        "description": "An apple is a sweet, edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus.",
+        "imageURL": "https://www.pngwing.com/en/free-png-zfoiv/download",
+        "mainland": "Europe",
+        "color": "red",
+        "countValue": 0,
+        "isAddedToList": false
+    },
+    {
+        "id": 2,
+        "name": "Blueberry",
+        "description": "A banana is an edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa. In some countries, bananas used for cooking may be called plantains, distinguishing them from dessert banana",
+        "imageURL": "http://www.pngall.com/wp-content/uploads/2016/04/Banana-PNG.png",
+        "mainland": "Africa",
+        "color": "red",
+        "countValue": 0,
+        "isAddedToList": false
+        
+    },
+    {
+        "id": 3,
+        "name": "Blackberry",
+        "description": "A cherry is the fruit of many plants of the genus Prunus, and is a fleshy drupe. Commercial cherries are obtained from cultivars of several species, such as the sweet Prunus avium and the sour Prunus cerasus.",
+        "imageURL":"https://cdn.shopify.com/s/files/1/0610/2881/products/cherries.jpg?v=1446676415",
+        "mainland":"Europe",
+        "color": "red",
+        "countValue": 0,
+        "isAddedToList": false
+    }
+]
