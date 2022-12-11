@@ -82,14 +82,7 @@ struct FoodBasket: View {
                 .opacity(0.5)
         )
        
-        Text("This basket is empty. \nPlease add item in it.")
-            .font(.title2)
-            .bold()
-            .foregroundColor(Color("DarkGreen"))
-            .multilineTextAlignment(.center)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .ignoresSafeArea()
-            .background(Color(uiColor: .secondarySystemFill))
+        BasketEmpty()
             .offset(y: orderedFruits.count == 0 && orderedVegies.count == 0 && orderedBerries.count == 0 ? 0 : UIScreen.main.bounds.height)
 
         } // END ZSTACK

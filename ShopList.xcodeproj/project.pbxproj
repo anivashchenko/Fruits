@@ -15,6 +15,7 @@
 		5D69FC7F293F45960068B6E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FC7E293F45960068B6E2 /* ContentView.swift */; };
 		5D69FC81293F45990068B6E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D69FC80293F45990068B6E2 /* Assets.xcassets */; };
 		5D69FC84293F45990068B6E2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D69FC83293F45990068B6E2 /* Preview Assets.xcassets */; };
+		5D79D5A4294601660015FC1C /* BasketEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D79D5A3294601660015FC1C /* BasketEmpty.swift */; };
 		5D896B5F2941EED0006B78D1 /* FilteredViewByColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D896B5E2941EED0006B78D1 /* FilteredViewByColors.swift */; };
 		5D9071D129409729004E0F37 /* FruitDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9071D029409729004E0F37 /* FruitDetail.swift */; };
 		5D91312D29421E9B00F06EF9 /* FoodGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D91312C29421E9B00F06EF9 /* FoodGrid.swift */; };
@@ -41,6 +42,7 @@
 		5D69FC7E293F45960068B6E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5D69FC80293F45990068B6E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D69FC83293F45990068B6E2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5D79D5A3294601660015FC1C /* BasketEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketEmpty.swift; sourceTree = "<group>"; };
 		5D896B5E2941EED0006B78D1 /* FilteredViewByColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredViewByColors.swift; sourceTree = "<group>"; };
 		5D9071D029409729004E0F37 /* FruitDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitDetail.swift; sourceTree = "<group>"; };
 		5D91312C29421E9B00F06EF9 /* FoodGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodGrid.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			children = (
 				5D487C422943706C00CA2ABF /* AddButton.swift */,
 				5D98BE332944A2FE00294F42 /* AddToTheList.swift */,
+				5D79D5A3294601660015FC1C /* BasketEmpty.swift */,
 				5D98BE352944DD2600294F42 /* BasketRow.swift */,
 				5D913130294228A100F06EF9 /* FoodAdd.swift */,
 				5D9D20B3294276E80008CB0B /* FoodBasket.swift */,
@@ -243,6 +246,7 @@
 				5D913131294228A100F06EF9 /* FoodAdd.swift in Sources */,
 				5D91312F29421FAD00F06EF9 /* FoodCategory.swift in Sources */,
 				5DCE8092293F6CF80050CE7F /* ModelData.swift in Sources */,
+				5D79D5A4294601660015FC1C /* BasketEmpty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
