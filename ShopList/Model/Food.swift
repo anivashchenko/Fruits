@@ -8,7 +8,7 @@
 import Foundation
 
 struct Food: Decodable, Hashable, Identifiable {
-    static var countItem: Int  = 0
+    static var countItem: Int = 0
     
     var id: Int
     var name: String

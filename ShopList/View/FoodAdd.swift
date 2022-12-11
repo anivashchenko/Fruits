@@ -63,7 +63,7 @@ struct FoodAdd: View {
                             .onAppear {
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                                     presentationMode.wrappedValue.dismiss()
-                                    }
+                                }
                             }
                     } else {
                         Spacer()
