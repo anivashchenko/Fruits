@@ -25,7 +25,7 @@
 		5D98BE362944DD2600294F42 /* BasketRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D98BE352944DD2600294F42 /* BasketRow.swift */; };
 		5D9D20AC294253970008CB0B /* FoodStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D20AB294253970008CB0B /* FoodStepper.swift */; };
 		5D9D20B2294275560008CB0B /* MyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D20B1294275560008CB0B /* MyTabView.swift */; };
-		5D9D20B4294276E80008CB0B /* FoodBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D20B3294276E80008CB0B /* FoodBasket.swift */; };
+		5D9D20B4294276E80008CB0B /* BasketList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D20B3294276E80008CB0B /* BasketList.swift */; };
 		5DCE8092293F6CF80050CE7F /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE8091293F6CF80050CE7F /* ModelData.swift */; };
 		5DCE8094293F6DCA0050CE7F /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE8093293F6DCA0050CE7F /* Food.swift */; };
 		5DCE8097293F76940050CE7F /* FruitRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE8096293F76940050CE7F /* FruitRow.swift */; };
@@ -52,7 +52,7 @@
 		5D98BE352944DD2600294F42 /* BasketRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRow.swift; sourceTree = "<group>"; };
 		5D9D20AB294253970008CB0B /* FoodStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStepper.swift; sourceTree = "<group>"; };
 		5D9D20B1294275560008CB0B /* MyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabView.swift; sourceTree = "<group>"; };
-		5D9D20B3294276E80008CB0B /* FoodBasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBasket.swift; sourceTree = "<group>"; };
+		5D9D20B3294276E80008CB0B /* BasketList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketList.swift; sourceTree = "<group>"; };
 		5DCE8091293F6CF80050CE7F /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		5DCE8093293F6DCA0050CE7F /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		5DCE8096293F76940050CE7F /* FruitRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitRow.swift; sourceTree = "<group>"; };
@@ -134,9 +134,9 @@
 				5D487C422943706C00CA2ABF /* AddButton.swift */,
 				5D98BE332944A2FE00294F42 /* AddToTheList.swift */,
 				5D79D5A3294601660015FC1C /* BasketEmpty.swift */,
+				5D9D20B3294276E80008CB0B /* BasketList.swift */,
 				5D98BE352944DD2600294F42 /* BasketRow.swift */,
 				5D913130294228A100F06EF9 /* FoodAdd.swift */,
-				5D9D20B3294276E80008CB0B /* FoodBasket.swift */,
 				5D91312E29421FAD00F06EF9 /* FoodCategory.swift */,
 				5D91312C29421E9B00F06EF9 /* FoodGrid.swift */,
 				5D9D20AB294253970008CB0B /* FoodStepper.swift */,
@@ -231,7 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DCE8094293F6DCA0050CE7F /* Food.swift in Sources */,
-				5D9D20B4294276E80008CB0B /* FoodBasket.swift in Sources */,
+				5D9D20B4294276E80008CB0B /* BasketList.swift in Sources */,
 				5D69FC7F293F45960068B6E2 /* ContentView.swift in Sources */,
 				5D487C432943706C00CA2ABF /* AddButton.swift in Sources */,
 				5D9D20B2294275560008CB0B /* MyTabView.swift in Sources */,
