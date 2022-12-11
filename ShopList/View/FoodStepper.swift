@@ -1,6 +1,6 @@
 //
 //  FoodStepper.swift
-//  Fruits
+//  ShopList
 //
 //  Created by Анастасія on 08.12.2022.
 //
