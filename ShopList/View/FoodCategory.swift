@@ -9,8 +9,7 @@ import SwiftUI
 
 struct FoodCategory: View {
     
-    //@EnvironmentObject var modelData: ModelData
-    @StateObject var modelData = ModelData()
+    @EnvironmentObject var modelData: ModelData
     
     let columns: [GridItem] = [
         GridItem(.adaptive(minimum: 100, maximum: 120), spacing: nil, alignment: .center),
@@ -32,26 +31,23 @@ struct FoodCategory: View {
                         Section(
                             header:
                                 Text("FRUIT")
-                                    .foregroundColor(Color("MyYellow"))
-//                                  .foregroundColor(Color("DarkGreen"))
+                                    .foregroundColor(Color("DarkGreen"))
                                     .font(.largeTitle)
                                     .frame(maxWidth: .infinity)
                                     .padding(.vertical, 8)
-                                    .background(Color("MyYellow").opacity(0.15))
+                                    .background(Color("DarkGreen").opacity(0.2))
                                     .bold(),
                             content: {
                                 ForEach(modelData.fruits, id: \.self) { fruit in
                                     NavigationLink {
                                         FoodAdd(food: fruit)
-//                                            .background(.yellow)
                                     } label: {
                                         FoodGrid(food: fruit)
-                                            .border(.yellow)
-                                            .tint(.yellow)
                                     }
                                 }
                             }
                         ) // END SECTION FRUIT
+                        .background(Color("DarkGreen").opacity(0.1))
                         
                         Section(
                             header:
@@ -72,6 +68,7 @@ struct FoodCategory: View {
                                 }
                             }
                         ) // END SECTION VEGY
+                        .background(Color("DarkGreen").opacity(0.1))
                         
                         Section(
                             header:
@@ -92,12 +89,14 @@ struct FoodCategory: View {
                                 }
                             }
                         ) // END SECTION BERRY
+                        .background(Color("DarkGreen").opacity(0.1))
                         
                     } // END CONTENT
                 ) // END GRID
-            } // END NAV
-            .navigationTitle("My shop list")
-        } // END
+            } // END SCRV
+            .navigationTitle("THE SHOP LIST")
+            
+        } // END NAV
     }
 }
 
