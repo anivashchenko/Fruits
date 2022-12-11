@@ -42,8 +42,6 @@ struct AddButton: View {
             
             Spacer()
 
-            Text("\(modelData.countItem)")
-            
             Button {
                 if countIsSet() {
                     if isSet == false {
