@@ -56,7 +56,7 @@ struct FoodStepper: View {
                 }
                 .disabled(!countIsPositive())
                 
-                Text("\(modelData.fruits[foodIndex].countValue)")
+                Text("\(modelDataType[foodIndex].countValue)")
                         .foregroundColor(.white)
                         .font(.largeTitle)
                 
@@ -76,13 +76,13 @@ struct FoodStepper: View {
         } // END ZSTACK
         .frame(width: 170, height: 80)
         .onAppear() {
-            countValue = modelData.fruits[foodIndex].countValue
+            countValue = modelDataType[foodIndex].countValue
         }
     }
     
     func incrementWidth(amount: Int) {
         withAnimation(.easeInOut) {
-            countValue = amount + modelData.fruits[foodIndex].countValue
+            countValue = amount + modelDataType[foodIndex].countValue
             countValueFloat = CGFloat(integerLiteral: amount)
                         
             if food.typeFood == .fruits {
