@@ -14,6 +14,7 @@ struct Food: Decodable, Hashable, Identifiable {
     var name: String
     var countValue: Int
     var isAddedToList: Bool
+    var isBought: Bool
     var isFavorite: Bool
     var typeFood: TypeFood
     

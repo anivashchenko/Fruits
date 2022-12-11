@@ -4,6 +4,7 @@
         "name": "Potato",
         "countValue": 0,
         "isAddedToList": false,
+        "isBought": false,
         "isFavorite": false,
         "typeFood": "vegies"
     },
@@ -12,6 +13,7 @@
         "name": "Tomato",
         "countValue": 0,
         "isAddedToList": false,
+        "isBought": false,
         "isFavorite": false,
         "typeFood": "vegies"
     },
@@ -20,6 +22,7 @@
         "name": "Carrot",
         "countValue": 0,
         "isAddedToList": false,
+        "isBought": false,
         "isFavorite": false,
         "typeFood": "vegies"
     },
@@ -28,6 +31,7 @@
         "name": "Cucumber",
         "countValue": 0,
         "isAddedToList": false,
+        "isBought": false,
         "isFavorite": false,
         "typeFood": "vegies"
     },
@@ -36,6 +40,7 @@
         "name": "Zucchini",
         "countValue": 0,
         "isAddedToList": false,
+        "isBought": false,
         "isFavorite": false,
         "typeFood": "vegies"
     },
@@ -44,6 +49,7 @@
         "name": "Onion",
         "countValue": 0,
         "isAddedToList": false,
+        "isBought": false,
         "isFavorite": false,
         "typeFood": "vegies"
     },
@@ -52,6 +58,7 @@
         "name": "Garlic",
         "countValue": 0,
         "isAddedToList": false,
+        "isBought": false,
         "isFavorite": false,
         "typeFood": "vegies"
     },
@@ -60,6 +67,7 @@
         "name": "Pepper",
         "countValue": 0,
         "isAddedToList": false,
+        "isBought": false,
         "isFavorite": false,
         "typeFood": "vegies"
     },
@@ -68,6 +76,7 @@
         "name": "Cabbage",
         "countValue": 0,
         "isAddedToList": false,
+        "isBought": false,
         "isFavorite": false,
         "typeFood": "vegies"
     },
@@ -76,6 +85,7 @@
         "name": "Cauliflower",
         "countValue": 0,
         "isAddedToList": false,
+        "isBought": false,
         "isFavorite": false,
         "typeFood": "vegies"
     },
@@ -84,6 +94,7 @@
         "name": "Broccoli",
         "countValue": 0,
         "isAddedToList": false,
+        "isBought": false,
         "isFavorite": false,
         "typeFood": "vegies"
     },
@@ -92,6 +103,7 @@
         "name": "Mushroom",
         "countValue": 0,
         "isAddedToList": false,
+        "isBought": false,
         "isFavorite": false,
         "typeFood": "vegies"
     }

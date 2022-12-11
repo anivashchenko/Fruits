@@ -12,11 +12,10 @@ struct BasketRow: View {
     @EnvironmentObject var modelData: ModelData
     
     @State var food: Food
-    @State var isBought: Bool = false
     
     var body: some View {
         HStack {
-            if isBought {
+            if food.isBought {
                 Image(systemName: "checkmark.square.fill")
                     .font(.title)
                     .foregroundColor(.white)
@@ -61,7 +60,7 @@ struct BasketRow: View {
                     }
         }
         .onTapGesture(count: 2) {
-            isBought.toggle()
+            food.isBought.toggle()
         }
     }
     
@@ -69,14 +68,17 @@ struct BasketRow: View {
         if type == .fruits {
             let foodIndex = modelData.fruits.firstIndex { $0.id == id }!
             modelData.fruits[foodIndex].isAddedToList = false
+            modelData.fruits[foodIndex].isBought = false
             modelData.fruits[foodIndex].countValue = 0
         } else if type == .vegies {
             let foodIndex = modelData.vegies.firstIndex { $0.id == id }!
             modelData.vegies[foodIndex].isAddedToList = false
+            modelData.fruits[foodIndex].isBought = false
             modelData.fruits[foodIndex].countValue = 0
         } else {
             let foodIndex = modelData.berries.firstIndex { $0.id == id }!
             modelData.berries[foodIndex].isAddedToList = false
+            modelData.fruits[foodIndex].isBought = false
             modelData.fruits[foodIndex].countValue = 0
         }
         

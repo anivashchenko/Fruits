@@ -4,6 +4,7 @@
         "name": "Raspberry",
         "countValue": 0,
         "isAddedToList": false,
+        "isBought": false,
         "isFavorite": false,
         "typeFood": "berries"
     },
@@ -12,6 +13,7 @@
         "name": "Blueberry",
         "countValue": 0,
         "isAddedToList": false,
+        "isBought": false,
         "isFavorite": false,
         "typeFood": "berries"
     },
@@ -20,6 +22,7 @@
         "name": "Blackberry",
         "countValue": 0,
         "isAddedToList": false,
+        "isBought": false,
         "isFavorite": false,
         "typeFood": "berries"
     }
