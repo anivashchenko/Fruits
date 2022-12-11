@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MyTabView: View {
     
+    @EnvironmentObject var modelData: ModelData    
     @State var selectedTab: Tab = .category
     
     enum Tab {
@@ -18,7 +19,6 @@ struct MyTabView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            
             FoodCategory()
                 .tabItem {
                     Label("Category", systemImage: "square.grid.3x3.fill")
@@ -30,8 +30,8 @@ struct MyTabView: View {
                     Label("Basket", systemImage: "basket.fill")
                 }
                 .tag(Tab.basket)
+                .badge(modelData.countItem)
         }
-        
     }
 }
 

@@ -47,7 +47,7 @@ struct AddButton: View {
             Button {
                 if countIsSet() {
                     if isSet == false {
-                        Food.countItem += 1
+                        modelData.countItem += 1
                     }
                     isSet = true
                     showAddedScreen = true
