@@ -44,6 +44,7 @@ struct BasketRow: View {
                         } label: {
                             Image(systemName: "trash.fill")
                                 .foregroundColor(.white)
+                                .padding(10)
                         }
                         .tint(.red)
                     }
@@ -54,6 +55,7 @@ struct BasketRow: View {
                         } label: {
                             Image(systemName: "star.fill")
                                 .foregroundColor(.white)
+                                .padding(10)
                         }
                         .tint(.yellow)
                     }
