@@ -73,6 +73,8 @@ struct BasketRow: View {
             let foodIndex = modelData.berries.firstIndex { $0.id == id }!
             modelData.berries[foodIndex].isAddedToList = false
         }
+        
+        modelData.countItem -= 1
     }
     
 }

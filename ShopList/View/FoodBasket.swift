@@ -133,6 +133,7 @@ struct FoodBasket: View {
                 modelData.berries[foodIndex].isAddedToList = false
             }
         }
+        modelData.countItem = 0
     } // END FUNC
 }
 
