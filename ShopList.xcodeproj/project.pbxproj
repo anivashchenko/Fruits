@@ -147,8 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				5D487C3C2943477800CA2ABF /* BerryData.json */,
-				5D487C402943479500CA2ABF /* VegData.json */,
 				5D487C3E2943478E00CA2ABF /* FruitData.json */,
+				5D487C402943479500CA2ABF /* VegData.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
