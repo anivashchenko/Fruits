@@ -84,6 +84,8 @@ struct FoodAdd: View {
                                       showAddedScreen: $showAddedScreen,
                                       food: modelData.berries[foodIndex])
                         }
+                        
+                        Spacer()
 
                     }
                 } // END VSTACK
