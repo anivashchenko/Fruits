@@ -122,12 +122,15 @@ struct BasketList: View {
             if food.typeFood == .fruits {
                 let foodIndex = modelData.fruits.firstIndex { $0.id == food.id }!
                 modelData.fruits[foodIndex].isAddedToList = false
+                modelData.fruits[foodIndex].countValue = 0
             } else if food.typeFood == .vegies {
                 let foodIndex = modelData.vegies.firstIndex { $0.id == food.id }!
                 modelData.vegies[foodIndex].isAddedToList = false
+                modelData.fruits[foodIndex].countValue = 0
             } else {
                 let foodIndex = modelData.berries.firstIndex { $0.id == food.id }!
                 modelData.berries[foodIndex].isAddedToList = false
+                modelData.fruits[foodIndex].countValue = 0
             }
         }
         modelData.countItem = 0
