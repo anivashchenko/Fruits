@@ -20,6 +20,7 @@ struct BasketRow: View {
                 Image(systemName: "checkmark.square.fill")
                     .font(.title)
                     .foregroundColor(.white)
+                    .frame(width: 45)
             } else {
                 Image(food.name)
                     .resizable()
