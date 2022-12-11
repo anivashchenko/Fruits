@@ -9,18 +9,37 @@ import SwiftUI
 
 struct FoodStepper: View {
     
+    @EnvironmentObject var modelData: ModelData
+    
     @Binding var countValue: Int
-    @State var widthIncrement: CGFloat = 0
+
+    @State var countValueFloat: CGFloat = 0
+    @State var food: Food
+    @State var typeFood: Food.TypeFood = .fruits
     
-    //@AppStorage("count") var currentCount: Int?
+    var modelDataType: [Food] {
+        get {
+            if food.typeFood == .fruits {
+                return modelData.fruits
+            } else if food.typeFood == .vegies {
+                return modelData.vegies
+            } else {
+                return modelData.berries
+            }
+        }
+    }
     
+    var foodIndex: Int {
+        modelDataType.firstIndex { $0.id == food.id }!
+    }
+   
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 15)
                 .fill(Color("MyOrange"))
-                .frame(width: 150, height: 50)
+                .frame(width: (140 + countValueFloat/10), height: 50)
             
-            HStack(spacing: 0) {
+            HStack(spacing: 10) {
                 Button {
                     if countIsPositive() {
                         incrementWidth(amount: -1)
@@ -29,7 +48,6 @@ struct FoodStepper: View {
                     RoundedRectangle(cornerRadius: 15)
                         .fill(Color("MyOrange"))
                         .frame(width: 50, height: 50)
-                        .padding(10)
                         .overlay {
                             Image(systemName: "minus")
                                 .font(.title)
@@ -38,7 +56,7 @@ struct FoodStepper: View {
                 }
                 .disabled(!countIsPositive())
                 
-                Text("\(countValue)")
+                Text("\(modelData.fruits[foodIndex].countValue)")
                         .foregroundColor(.white)
                         .font(.largeTitle)
                 
@@ -48,35 +66,43 @@ struct FoodStepper: View {
                     RoundedRectangle(cornerRadius: 15)
                         .fill(Color("MyOrange"))
                         .frame(width: 50, height: 50)
-                        .padding(10)
                         .overlay {
                             Image(systemName: "plus")
                                 .font(.title)
                                 .foregroundColor(.white)
                         }
-                        
                 }
             } // END HSTACK
         } // END ZSTACK
         .frame(width: 170, height: 80)
+        .onAppear() {
+            countValue = modelData.fruits[foodIndex].countValue
+        }
     }
     
-    func incrementWidth(amount: CGFloat) {
+    func incrementWidth(amount: Int) {
         withAnimation(.easeInOut) {
-            widthIncrement += amount
-
-            let countString = String(format: "%.0f", widthIncrement)
-            countValue = Int(countString) ?? 0            
+            countValue = amount + modelData.fruits[foodIndex].countValue
+            countValueFloat = CGFloat(integerLiteral: amount)
+                        
+            if food.typeFood == .fruits {
+                modelData.fruits[foodIndex].countValue = countValue
+            } else if food.typeFood == .vegies {
+                modelData.vegies[foodIndex].countValue = countValue
+            } else {
+                modelData.berries[foodIndex].countValue = countValue
+            }
         }
     }
     
     func countIsPositive() -> Bool {
-        widthIncrement >= 1 ? true : false
+        modelData.fruits[foodIndex].countValue > 0 ? true : false
     }
 }
 
 struct FoodStepper_Previews: PreviewProvider {
     static var previews: some View {
-        FoodStepper(countValue: .constant(1))
+        FoodStepper(countValue: .constant(0), food: ModelData().fruits[1])
+            .environmentObject(ModelData())
     }
 }
