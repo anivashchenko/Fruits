@@ -27,10 +27,9 @@ struct FoodGrid: View {
                 }
         }
         .frame(width: 120, height: 120)
-        .border(Color("DarkGreen"))
+        .border(food.isAddedToList ? .blue : Color("DarkGreen") )
     }
 }
-    
 
 struct FruitGrid_Previews: PreviewProvider {
     static var previews: some View {
