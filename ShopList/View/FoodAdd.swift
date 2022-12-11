@@ -11,16 +11,28 @@ struct FoodAdd: View {
     
     @EnvironmentObject var modelData: ModelData
     
-    var food: Food
-    //@State var textField: String = ""
-    //@State var count: Double = 0.0
-    
+    @State var food: Food
+    @State var typeFood: Food.TypeFood = .fruits
     @State var countValue: Int = 0
+    @State var showAddedScreen: Bool = false
     
-//    var foodIndex: Int {
-//        ModelData().fruits.firstIndex { $0.id == food.id }!
-//        //modelData.landmarks.firstIndex(where: { $0.id == landmark.id } )!
-//    }
+    @Environment(\.presentationMode) var presentationMode
+        
+    var modelDataType: [Food] {
+        get {
+            if food.typeFood == .fruits {
+                return modelData.fruits
+            } else if food.typeFood == .vegies {
+                return modelData.vegies
+            } else {
+                return modelData.berries
+            }
+        }
+    }
+    
+    var foodIndex: Int {
+        modelDataType.firstIndex { $0.id == food.id }!
+    }
     
     var body: some View {
         ZStack {
@@ -45,52 +57,41 @@ struct FoodAdd: View {
                 .frame(width: geomentry.size.width * 0.8)
                 .offset(x: geomentry.size.width * 0.1)
                 
-                
                 VStack {
-                    Spacer()
-                    
-                    HStack {
-                        FoodStepper(countValue: $countValue)
-                        //FoodStepper(countValue: $modelData.fruits[foodIndex].countValue)
-                            .padding(10)
-                        
+                    if showAddedScreen {
+                        AddToTheList()
+                            .onAppear {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                    presentationMode.wrappedValue.dismiss()
+                                    }
+                            }
+                    } else {
                         Spacer()
-                        
-                        Button {
-                            if countIsSet() { addToList() }
-                        } label: {
-                            RoundedRectangle(cornerRadius: 20)
-                                .frame(width: 80, height: 60)
-                                .padding(20)
-                                .overlay {
-                                    Image(systemName: "basket.fill")
-                                        .font(.title)
-                                        .foregroundColor(.white)
-                                }
+                        Spacer()
+                                                
+                        if food.typeFood == .fruits {
+                            AddButton(isSet: $modelData.fruits[foodIndex].isAddedToList,
+                                      showAddedScreen: $showAddedScreen,
+                                      food: modelData.fruits[foodIndex])
                         }
-                        .disabled(!countIsSet())
-                        
+                        if food.typeFood == .vegies {
+                            AddButton(isSet: $modelData.vegies[foodIndex].isAddedToList,
+                                      showAddedScreen: $showAddedScreen,
+                                      food: modelData.vegies[foodIndex])
+                        }
+                        if food.typeFood == .berries {
+                            AddButton(isSet: $modelData.berries[foodIndex].isAddedToList,
+                                      showAddedScreen: $showAddedScreen,
+                                      food: modelData.berries[foodIndex])
+                        }
+
                     }
-                    
                 } // END VSTACK
-                .frame(height: 400)
-                
-            }
-        }
-        // END ZSTACK
-        //.frame(height: 400)
+            } // END GEOM
+        } // END ZSTACK
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(.green.opacity(0.3))
-    }
-    
-    func countIsSet() -> Bool {
-        countValue > 0 ? true : false
-    }
-    
-    func addToList() {
-//        dataArray.append(textFieldText)
-//        // add this to detete text in the field when you save it
-//        textFieldText = ""
+        .background(Color("DarkGreen").opacity(0.5))
+        
     }
 }
 
