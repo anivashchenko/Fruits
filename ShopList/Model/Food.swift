@@ -8,20 +8,18 @@
 import Foundation
 
 struct Food: Decodable, Hashable, Identifiable {
+    static var countItem: Int  = 0
+    
     var id: Int
     var name: String
-    var description: String
-    var imageURL: String
-    var mainland: String
-    var color: Color
     var countValue: Int
     var isAddedToList: Bool
+    var isFavorite: Bool
+    var typeFood: TypeFood
     
-    enum Color: String, Decodable {
-        case yellow
-        case orange
-        case red
-        case green
-        case allColor
+    enum TypeFood: String, Decodable {
+        case fruits
+        case vegies
+        case berries
     }
 }
