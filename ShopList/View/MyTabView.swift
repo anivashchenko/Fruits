@@ -25,7 +25,7 @@ struct MyTabView: View {
                 }
                 .tag(Tab.category)
             
-            FoodBasket()
+            BasketList()
                 .tabItem {
                     Label("Basket", systemImage: "basket.fill")
                 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FoodBasket: View {
+struct BasketList: View {
     
     @EnvironmentObject var modelData: ModelData
     
@@ -130,9 +130,9 @@ struct FoodBasket: View {
     } // END FUNC
 }
 
-struct FoodBasket_Previews: PreviewProvider {
+struct BasketList_Previews: PreviewProvider {
     static var previews: some View {
-        FoodBasket()
+        BasketList()
             .environmentObject(ModelData())
     }
 }
