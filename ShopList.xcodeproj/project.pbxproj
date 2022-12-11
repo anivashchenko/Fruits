@@ -129,16 +129,16 @@
 		5DCE8095293F76010050CE7F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5D8A03C829432F4500D079A3 /* OLD */,
+				5D487C422943706C00CA2ABF /* AddButton.swift */,
+				5D98BE332944A2FE00294F42 /* AddToTheList.swift */,
+				5D98BE352944DD2600294F42 /* BasketRow.swift */,
 				5D913130294228A100F06EF9 /* FoodAdd.swift */,
 				5D9D20B3294276E80008CB0B /* FoodBasket.swift */,
 				5D91312E29421FAD00F06EF9 /* FoodCategory.swift */,
 				5D91312C29421E9B00F06EF9 /* FoodGrid.swift */,
 				5D9D20AB294253970008CB0B /* FoodStepper.swift */,
 				5D9D20B1294275560008CB0B /* MyTabView.swift */,
-				5D487C422943706C00CA2ABF /* AddButton.swift */,
-				5D98BE332944A2FE00294F42 /* AddToTheList.swift */,
-				5D98BE352944DD2600294F42 /* BasketRow.swift */,
+				5D8A03C829432F4500D079A3 /* OLD */,
 			);
 			path = View;
 			sourceTree = "<group>";
