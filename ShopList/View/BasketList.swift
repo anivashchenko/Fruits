@@ -38,7 +38,7 @@ struct BasketList: View {
         ZStack {
         NavigationView {
                 List {
-                    if (orderedFruits.count > 0 || orderedVegies.count > 0 || orderedBerries.count > 0 ) {
+                    if !isEmptyBasket() {
                         Section(header:
                                     Text("Want to buy:")
                             .font(.headline)
@@ -83,7 +83,7 @@ struct BasketList: View {
         )
        
         BasketEmpty()
-            .offset(y: orderedFruits.count == 0 && orderedVegies.count == 0 && orderedBerries.count == 0 ? 0 : UIScreen.main.bounds.height)
+            .offset(y: isEmptyBasket() ? 0 : UIScreen.main.bounds.height)
 
         } // END ZSTACK
     } // END BODY
@@ -103,6 +103,10 @@ struct BasketList: View {
     
     func getList() {
         orderedFood = [orderedFruits, orderedVegies, orderedBerries]
+    }
+    
+    func isEmptyBasket() -> Bool {
+        orderedFruits.count == 0 && orderedVegies.count == 0 && orderedBerries.count == 0
     }
     
     func getAlert() -> Alert {
