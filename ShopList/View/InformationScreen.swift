@@ -4,7 +4,7 @@
 
 import SwiftUI
 
-struct AddToTheList: View {
+struct InformationScreen: View {
     
     @Environment(\.presentationMode) var presentationMode
     @State var delay: Double = 1
@@ -36,8 +36,8 @@ struct AddToTheList: View {
     }
 }
 
-struct AddToTheList_Previews: PreviewProvider {
+struct InformationScreen_Previews: PreviewProvider {
     static var previews: some View {
-        AddToTheList()
+        InformationScreen()
     }
 }

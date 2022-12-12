@@ -131,7 +131,7 @@ struct BasketList: View {
             getActionSheet()
         }
         .sheet(isPresented: $showAddList) {
-            AddToTheList(delay: 2, topic: .list)
+            InformationScreen(delay: 2, topic: .list)
         }
     }
     

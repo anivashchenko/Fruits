@@ -68,7 +68,7 @@ struct FoodAdd: View {
                 }
                 
                 VStack {
-                    showAddedScreen ? AddToTheList() : nil
+                    showAddedScreen ? InformationScreen() : nil
                 } // END VSTACK
         } // END ZSTACK
         .frame(maxWidth: .infinity, maxHeight: .infinity)

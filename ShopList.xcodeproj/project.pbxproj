@@ -21,7 +21,7 @@
 		5D91312D29421E9B00F06EF9 /* FoodGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D91312C29421E9B00F06EF9 /* FoodGrid.swift */; };
 		5D91312F29421FAD00F06EF9 /* FoodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D91312E29421FAD00F06EF9 /* FoodCategory.swift */; };
 		5D913131294228A100F06EF9 /* FoodAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D913130294228A100F06EF9 /* FoodAdd.swift */; };
-		5D98BE342944A2FE00294F42 /* AddToTheList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D98BE332944A2FE00294F42 /* AddToTheList.swift */; };
+		5D98BE342944A2FE00294F42 /* InformationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D98BE332944A2FE00294F42 /* InformationScreen.swift */; };
 		5D98BE362944DD2600294F42 /* BasketRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D98BE352944DD2600294F42 /* BasketRow.swift */; };
 		5D9D20AC294253970008CB0B /* FoodStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D20AB294253970008CB0B /* FoodStepper.swift */; };
 		5D9D20B2294275560008CB0B /* MyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D20B1294275560008CB0B /* MyTabView.swift */; };
@@ -48,7 +48,7 @@
 		5D91312C29421E9B00F06EF9 /* FoodGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodGrid.swift; sourceTree = "<group>"; };
 		5D91312E29421FAD00F06EF9 /* FoodCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategory.swift; sourceTree = "<group>"; };
 		5D913130294228A100F06EF9 /* FoodAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAdd.swift; sourceTree = "<group>"; };
-		5D98BE332944A2FE00294F42 /* AddToTheList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToTheList.swift; sourceTree = "<group>"; };
+		5D98BE332944A2FE00294F42 /* InformationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationScreen.swift; sourceTree = "<group>"; };
 		5D98BE352944DD2600294F42 /* BasketRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRow.swift; sourceTree = "<group>"; };
 		5D9D20AB294253970008CB0B /* FoodStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStepper.swift; sourceTree = "<group>"; };
 		5D9D20B1294275560008CB0B /* MyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabView.swift; sourceTree = "<group>"; };
@@ -132,7 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				5D487C422943706C00CA2ABF /* AddButton.swift */,
-				5D98BE332944A2FE00294F42 /* AddToTheList.swift */,
 				5D79D5A3294601660015FC1C /* BasketEmpty.swift */,
 				5D9D20B3294276E80008CB0B /* BasketList.swift */,
 				5D98BE352944DD2600294F42 /* BasketRow.swift */,
@@ -140,6 +139,7 @@
 				5D91312E29421FAD00F06EF9 /* FoodCategory.swift */,
 				5D91312C29421E9B00F06EF9 /* FoodGrid.swift */,
 				5D9D20AB294253970008CB0B /* FoodStepper.swift */,
+				5D98BE332944A2FE00294F42 /* InformationScreen.swift */,
 				5D9D20B1294275560008CB0B /* MyTabView.swift */,
 				5D8A03C829432F4500D079A3 /* OLD */,
 			);
@@ -236,7 +236,7 @@
 				5D487C432943706C00CA2ABF /* AddButton.swift in Sources */,
 				5D9D20B2294275560008CB0B /* MyTabView.swift in Sources */,
 				5DCE80A8293FD2BB0050CE7F /* FruitList.swift in Sources */,
-				5D98BE342944A2FE00294F42 /* AddToTheList.swift in Sources */,
+				5D98BE342944A2FE00294F42 /* InformationScreen.swift in Sources */,
 				5D91312D29421E9B00F06EF9 /* FoodGrid.swift in Sources */,
 				5D98BE362944DD2600294F42 /* BasketRow.swift in Sources */,
 				5D9071D129409729004E0F37 /* FruitDetail.swift in Sources */,
