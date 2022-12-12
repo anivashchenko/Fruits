@@ -6,30 +6,10 @@ import SwiftUI
 
 struct FoodStepper: View {
     
-    @EnvironmentObject var modelData: ModelData
-    
     @Binding var countValue: Int
-
     @State var countValueFloat: CGFloat = 0
-    @State var food: Food
-    @State var typeFood: Food.TypeFood = .fruits
+    @State var getCount: () -> ()
     
-    var modelDataType: [Food] {
-        get {
-            if food.typeFood == .fruits {
-                return modelData.fruits
-            } else if food.typeFood == .vegies {
-                return modelData.vegies
-            } else {
-                return modelData.berries
-            }
-        }
-    }
-    
-    var foodIndex: Int {
-        modelDataType.firstIndex { $0.id == food.id }!
-    }
-   
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 15)
@@ -53,7 +33,7 @@ struct FoodStepper: View {
                 }
                 .disabled(!countIsPositive())
                 
-                Text("\(modelDataType[foodIndex].countValue)")
+                Text("\(countValue)")
                         .foregroundColor(.white)
                         .font(.largeTitle)
                 
@@ -72,34 +52,26 @@ struct FoodStepper: View {
             } // END HSTACK
         } // END ZSTACK
         .frame(width: 170, height: 80)
-        .onAppear() {
-            countValue = modelDataType[foodIndex].countValue
-        }
+        .onAppear(perform: getCount)
     }
     
     func incrementWidth(amount: Int) {
         withAnimation(.easeInOut) {
-            countValue = amount + modelDataType[foodIndex].countValue
+            countValue += amount
             countValueFloat = CGFloat(integerLiteral: amount)
-                        
-            if food.typeFood == .fruits {
-                modelData.fruits[foodIndex].countValue = countValue
-            } else if food.typeFood == .vegies {
-                modelData.vegies[foodIndex].countValue = countValue
-            } else {
-                modelData.berries[foodIndex].countValue = countValue
-            }
         }
     }
     
     func countIsPositive() -> Bool {
-        modelData.fruits[foodIndex].countValue > 0 ? true : false
+        countValue > 0 ? true : false
     }
 }
 
 struct FoodStepper_Previews: PreviewProvider {
+    static func getCount() {}
+    
     static var previews: some View {
-        FoodStepper(countValue: .constant(0), food: ModelData().fruits[1])
+        FoodStepper(countValue: .constant(0), getCount: getCount)
             .environmentObject(ModelData())
     }
 }

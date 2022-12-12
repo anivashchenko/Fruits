@@ -27,14 +27,17 @@ struct AddButton: View {
         }
     }
     
+    func setCount() {
+        countValue = food.countValue
+    }
+    
     var foodIndex: Int {
         modelDataType.firstIndex { $0.id == food.id }!
     }
     
     var body: some View {
         HStack {
-            FoodStepper(countValue: $countValue,
-                        food: modelDataType[foodIndex])
+            FoodStepper(countValue: $countValue, getCount: setCount)
                 .padding(8)
             
             Spacer()
