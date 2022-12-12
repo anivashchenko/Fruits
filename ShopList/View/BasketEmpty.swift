@@ -6,14 +6,20 @@ import SwiftUI
 
 struct BasketEmpty: View {
     var body: some View {
-        Text("This basket is empty. \nPlease add item in it.")
-            .font(.title2)
-            .bold()
-            .foregroundColor(Color("DarkGreen"))
-            .multilineTextAlignment(.center)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .ignoresSafeArea()
-            .background(Color(uiColor: .secondarySystemFill))
+        VStack {
+            Text("This basket is empty.")
+                .font(.title)
+                .fontWeight(.semibold)
+                .foregroundColor(Color("DarkGreen"))
+            
+            Text("Please add item in it.")
+                .font(.headline)
+                .foregroundColor(Color("DarkGreen"))
+                .multilineTextAlignment(.center)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .ignoresSafeArea()
+        .background(Color(uiColor: .lightGray))
     }
 }
 
