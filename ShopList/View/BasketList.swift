@@ -11,6 +11,9 @@ struct BasketList: View {
     @State var food: Food = ModelData().fruits[1]
     @State var typeFood: Food.TypeFood = .fruits
     @State var countBoughtItem: Int = 0
+    @State var showActionSheet: Bool = false
+    @State var isListOneOn: Bool = false
+    @State var showAddList: Bool = false
     
     var orderedFruits: [Food] { modelData.fruits.filter { fruit in fruit.isAddedToList }}
     var orderedVegies: [Food] { modelData.vegies.filter { vegetable in vegetable.isAddedToList }}
@@ -40,7 +43,18 @@ struct BasketList: View {
         ZStack {
             NavigationView {
                 List {
-                    if !isEmptyBasket() {
+                    if isListOneOn {
+                        Section {
+                            ForEach(orderedFood, id: \.self) { typeFood in
+                                ForEach(typeFood) { food in
+                                    BasketRow(food: food, countBoughtItem: $countBoughtItem)
+                                }
+                                .listRowBackground(Color("DarkGreen").opacity(0.35))
+                            } // END FOREACH
+                        } // END SECTION
+                    }
+                        
+                    if !isEmptyBasket() && !isListOneOn {
                         Section(header:
                                     Text("Want to buy:")
                             .font(.headline)
@@ -54,8 +68,8 @@ struct BasketList: View {
                             } // END FOREACH
                         } // END SECTION
                     } // END IF
-                
-                    if countBoughtItem > 0 {
+                    
+                    if countBoughtItem > 0 && !isListOneOn {
                         Section(header:
                                     Text("Bought:")
                             .font(.headline)
@@ -77,6 +91,9 @@ struct BasketList: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     deleteButton
                 }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    settingsButton
+                }
             } // END TOOLBAR
         } // END NAV
         .background(
@@ -94,12 +111,28 @@ struct BasketList: View {
         Button {
             showAlert.toggle()
         } label: {
-            Image(systemName: "trash.square.fill")
-                .font(.title)
+            Image(systemName: "trash.circle")
+                .font(.title2)
                 .foregroundColor(Color("DarkGreen"))
         }
         .alert(isPresented: $showAlert) {
             getAlert()
+        }
+    }
+    
+    var settingsButton: some View {
+        Button {
+            showActionSheet.toggle()
+        } label: {
+            Image(systemName: "ellipsis.circle")
+                .font(.title2)
+                .foregroundColor(Color("DarkGreen"))
+        }
+        .actionSheet(isPresented: $showActionSheet) {
+            getActionSheet()
+        }
+        .sheet(isPresented: $showAddList) {
+            AddToTheList(delay: 2, topic: .list)
         }
     }
     
@@ -110,6 +143,20 @@ struct BasketList: View {
     
     func isEmptyBasket() -> Bool {
         orderedFruits.isEmpty && orderedVegies.isEmpty && orderedBerries.isEmpty
+    }
+    
+    func getActionSheet() -> ActionSheet {
+        return ActionSheet(
+            title: Text("Which type of list would you like to see?"),
+            buttons: [
+                .default(Text(isListOneOn ? "\u{27A9} List" : "List")) {
+                    isListOneOn ? (showAddList = true) : (isListOneOn = true)
+                },
+                .default(Text(!isListOneOn ? "\u{27A9} Want to buy & Bought" : "Want to buy & Bought")) {
+                    !isListOneOn ? (showAddList = true) : (isListOneOn = false)
+                },
+                .cancel()
+            ])
     }
     
     func getAlert() -> Alert {
