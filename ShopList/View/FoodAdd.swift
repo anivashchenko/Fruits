@@ -16,8 +16,6 @@ struct FoodAdd: View {
     @State var countValue: Int = 0
     @State var showAddedScreen: Bool = false
     
-    @Environment(\.presentationMode) var presentationMode
-        
     var modelDataType: [Food] {
         get {
             if food.typeFood == .fruits {
@@ -52,42 +50,30 @@ struct FoodAdd: View {
                         .resizable()
                         .scaledToFit()
                         .clipped()
-                        .offset(y: 20)
+                    
+                    Spacer()
+                    
+                    if food.typeFood == .fruits {
+                        AddButton(isSet: $modelData.fruits[foodIndex].isAddedToList,
+                                  showAddedScreen: $showAddedScreen,
+                                  food: modelData.fruits[foodIndex])
+                    }
+                    if food.typeFood == .vegies {
+                        AddButton(isSet: $modelData.vegies[foodIndex].isAddedToList,
+                                  showAddedScreen: $showAddedScreen,
+                                  food: modelData.vegies[foodIndex])
+                    }
+                    if food.typeFood == .berries {
+                        AddButton(isSet: $modelData.berries[foodIndex].isAddedToList,
+                                  showAddedScreen: $showAddedScreen,
+                                  food: modelData.berries[foodIndex])
+                    }
                 }
                 .frame(width: geomentry.size.width * 0.8)
                 .offset(x: geomentry.size.width * 0.1)
                 
                 VStack {
-                    if showAddedScreen {
-                        AddToTheList()
-                            .onAppear {
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                                    presentationMode.wrappedValue.dismiss()
-                                }
-                            }
-                    } else {
-                        Spacer()
-                        Spacer()
-                                                
-                        if food.typeFood == .fruits {
-                            AddButton(isSet: $modelData.fruits[foodIndex].isAddedToList,
-                                      showAddedScreen: $showAddedScreen,
-                                      food: modelData.fruits[foodIndex])
-                        }
-                        if food.typeFood == .vegies {
-                            AddButton(isSet: $modelData.vegies[foodIndex].isAddedToList,
-                                      showAddedScreen: $showAddedScreen,
-                                      food: modelData.vegies[foodIndex])
-                        }
-                        if food.typeFood == .berries {
-                            AddButton(isSet: $modelData.berries[foodIndex].isAddedToList,
-                                      showAddedScreen: $showAddedScreen,
-                                      food: modelData.berries[foodIndex])
-                        }
-                        
-                        Spacer()
-
-                    }
+                    showAddedScreen ? AddToTheList() : nil
                 } // END VSTACK
             } // END GEOM
         } // END ZSTACK

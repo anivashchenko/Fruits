@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct AddToTheList: View {
+    
+    @Environment(\.presentationMode) var presentationMode
+
     var body: some View {
         Text("Successfully added to shop list!")
             .font(.title2)
@@ -21,6 +24,11 @@ struct AddToTheList: View {
             )
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(.thinMaterial)
+            .onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    presentationMode.wrappedValue.dismiss()
+                }
+            }
     }
 }
 
