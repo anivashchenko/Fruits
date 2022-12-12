@@ -8,8 +8,8 @@ struct AddToTheList: View {
     
     @Environment(\.presentationMode) var presentationMode
     @State var delay: Double = 1
-    @State var topic: Topic = .list
-
+    @State var topic: Topic = .basket
+    
     enum Topic: String {
         case basket = "Successfully added to shop list!"
         case list = "This type of list has already chosen!"
