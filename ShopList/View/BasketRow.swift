@@ -61,7 +61,21 @@ struct BasketRow: View {
                     }
         }
         .onTapGesture(count: 2) {
-            food.isBought.toggle()
+            food.isAddedToList ? (countBoughtItem += 1) : (countBoughtItem -= 1)
+            
+            if food.typeFood == .fruits {
+                let foodIndex = modelData.fruits.firstIndex { $0.id == food.id }!
+                modelData.fruits[foodIndex].isAddedToList.toggle()
+                modelData.fruits[foodIndex].isBought.toggle()
+            } else if food.typeFood == .vegies {
+                let foodIndex = modelData.vegies.firstIndex { $0.id == food.id }!
+                modelData.vegies[foodIndex].isAddedToList.toggle()
+                modelData.fruits[foodIndex].isBought.toggle()
+            } else {
+                let foodIndex = modelData.berries.firstIndex { $0.id == food.id }!
+                modelData.berries[foodIndex].isAddedToList.toggle()
+                modelData.fruits[foodIndex].isBought.toggle()
+            }
         }
     }
     
