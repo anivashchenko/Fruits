@@ -4,7 +4,7 @@
 
 import SwiftUI
 
-struct FoodStepper: View {
+struct CountStepper: View {
     
     @Binding var countValue: Int
     @State var countValueFloat: CGFloat = 0
@@ -67,11 +67,11 @@ struct FoodStepper: View {
     }
 }
 
-struct FoodStepper_Previews: PreviewProvider {
+struct CountStepper_Previews: PreviewProvider {
     static func getCount() {}
     
     static var previews: some View {
-        FoodStepper(countValue: .constant(0), getCount: getCount)
+        CountStepper(countValue: .constant(0), getCount: getCount)
             .environmentObject(ModelData())
     }
 }

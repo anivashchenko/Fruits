@@ -22,7 +22,7 @@ struct AddButton: View {
     
     var body: some View {
         HStack {
-            FoodStepper(countValue: $countValue, getCount: setCount)
+            CountStepper(countValue: $countValue, getCount: setCount)
                 .padding(8)
             
             Spacer()
