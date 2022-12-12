@@ -41,7 +41,7 @@ struct BasketList: View {
         
     var body: some View {
         ZStack {
-        NavigationView {
+            NavigationView {
                 List {
                     if !isEmptyBasket() {
                         Section(header:
@@ -72,17 +72,15 @@ struct BasketList: View {
                                 } // END FOREACH
                         } // END SECTION
                     } // END IF
-                    
-                } // END LIST
-                .onAppear(perform: getList)
-                .listStyle(.insetGrouped)
-            
-        .navigationTitle("My basket")
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                deleteButton
-            }
-        } // END TOOLBAR
+            } // END LIST
+            .onAppear(perform: getList)
+            .listStyle(.insetGrouped)
+            .navigationTitle("My basket")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    deleteButton
+                }
+            } // END TOOLBAR
         } // END NAV
         .background(
             Color("DarkGreen")
@@ -92,8 +90,8 @@ struct BasketList: View {
         BasketEmpty()
             .offset(y: (isEmptyBasket() && countBoughtItem == 0) ? 0 : UIScreen.main.bounds.height)
 
-        } // END ZSTACK
-    } // END BODY
+    } // END ZSTACK
+} // END BODY
     
     var deleteButton: some View {
         Button {
