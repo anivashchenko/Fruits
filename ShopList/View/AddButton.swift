@@ -16,24 +16,8 @@ struct AddButton: View {
     @State var food: Food
     @State var typeFood: Food.TypeFood = .fruits
     
-    var modelDataType: [Food] {
-        get {
-            if food.typeFood == .fruits {
-                return modelData.fruits
-            } else if food.typeFood == .vegies {
-                return modelData.vegies
-            } else {
-                return modelData.berries
-            }
-        }
-    }
-    
     func setCount() {
         countValue = food.countValue
-    }
-    
-    var foodIndex: Int {
-        modelDataType.firstIndex { $0.id == food.id }!
     }
     
     var body: some View {
