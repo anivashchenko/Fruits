@@ -7,8 +7,9 @@ import SwiftUI
 struct AddToTheList: View {
     
     @Environment(\.presentationMode) var presentationMode
+    @State var delay: Double = 1
     @State var topic: Topic = .list
-    
+
     enum Topic: String {
         case basket = "Successfully added to shop list!"
         case list = "This type of list has already chosen!"
@@ -28,7 +29,7 @@ struct AddToTheList: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(.thinMaterial)
             .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                     presentationMode.wrappedValue.dismiss()
                 }
             }
