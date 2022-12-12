@@ -38,7 +38,7 @@ struct AddButton: View {
         HStack {
             FoodStepper(countValue: $countValue,
                         food: modelDataType[foodIndex])
-                .padding(10)
+                .padding(8)
             
             Spacer()
 
