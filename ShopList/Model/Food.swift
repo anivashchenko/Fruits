@@ -1,8 +1,5 @@
 //
-//  Food.swift
-//  ShopList
-//
-//  Created by Анастасія on 06.12.2022.
+//  Copyright © 2022 Anastasiia Ivashchenko. All rights reserved.
 //
 
 import Foundation

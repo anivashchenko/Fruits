@@ -1,5 +1,5 @@
 //
-//  
+//  Copyright © 2022 Anastasiia Ivashchenko. All rights reserved.
 //
 
 import SwiftUI

@@ -1,8 +1,5 @@
 //
-//  MyTabView.swift
-//  Fruits
-//
-//  Created by Анастасія on 08.12.2022.
+//  Copyright © 2022 Anastasiia Ivashchenko. All rights reserved.
 //
 
 import SwiftUI
