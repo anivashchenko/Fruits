@@ -10,7 +10,6 @@ struct FoodAdd: View {
     
     @State var food: Food
     @State var typeFood: Food.TypeFood = .fruits
-    @State var countValue: Int = 0
     @State var showAddedScreen: Bool = false
     
     var modelDataType: [Food] {
@@ -53,16 +52,19 @@ struct FoodAdd: View {
                     if food.typeFood == .fruits {
                         AddButton(isSet: $modelData.fruits[foodIndex].isAddedToList,
                                   showAddedScreen: $showAddedScreen,
+                                  countValueSet: $modelData.fruits[foodIndex].countValue,
                                   food: modelData.fruits[foodIndex])
                     }
                     if food.typeFood == .vegies {
                         AddButton(isSet: $modelData.vegies[foodIndex].isAddedToList,
                                   showAddedScreen: $showAddedScreen,
+                                  countValueSet: $modelData.fruits[foodIndex].countValue,
                                   food: modelData.vegies[foodIndex])
                     }
                     if food.typeFood == .berries {
                         AddButton(isSet: $modelData.berries[foodIndex].isAddedToList,
                                   showAddedScreen: $showAddedScreen,
+                                  countValueSet: $modelData.fruits[foodIndex].countValue,
                                   food: modelData.berries[foodIndex])
                     }
                 }

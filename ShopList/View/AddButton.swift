@@ -10,6 +10,7 @@ struct AddButton: View {
     
     @Binding var isSet: Bool
     @Binding var showAddedScreen: Bool
+    @Binding var countValueSet: Int
 
     @State var countValue: Int = 0
     @State var food: Food
@@ -63,6 +64,10 @@ struct AddButton: View {
             .disabled(!countIsSet())
 
         } // END HSTACK
+        .onDisappear() {
+            countValueSet = countValue
+        }
+        
     } // END BODY
         
     func countIsSet() -> Bool {
@@ -72,8 +77,7 @@ struct AddButton: View {
 
 struct AddButton_Previews: PreviewProvider {
     static var previews: some View {
-        AddButton(isSet: .constant(false), showAddedScreen: .constant(false),
-                  food: ModelData().fruits[1])
+        AddButton(isSet: .constant(false), showAddedScreen: .constant(false), countValueSet: .constant(0), food: ModelData().fruits[1])
             .environmentObject(ModelData())
     }
 }
