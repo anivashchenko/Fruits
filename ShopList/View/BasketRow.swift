@@ -12,7 +12,8 @@ struct BasketRow: View {
     @EnvironmentObject var modelData: ModelData
     
     @State var food: Food
-    
+    @Binding var countBoughtItem: Int
+
     var body: some View {
         HStack {
             if food.isBought {
@@ -89,6 +90,6 @@ struct BasketRow: View {
 
 struct BasketRow_Previews: PreviewProvider {
     static var previews: some View {
-        BasketRow(food: ModelData().fruits[1])
+        BasketRow(food: ModelData().fruits[1], countBoughtItem: .constant(0))
     }
 }

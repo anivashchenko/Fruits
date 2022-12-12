@@ -13,7 +13,8 @@ struct BasketList: View {
     
     @State var food: Food = ModelData().fruits[1]
     @State var typeFood: Food.TypeFood = .fruits
-
+    @State var countBoughtItem: Int = 0
+    
     var orderedFruits: [Food] { modelData.fruits.filter { fruit in fruit.isAddedToList }}
     var orderedVegies: [Food] { modelData.vegies.filter { vegetable in vegetable.isAddedToList }}
     var orderedBerries: [Food] { modelData.berries.filter { berry in berry.isAddedToList }}
@@ -46,23 +47,25 @@ struct BasketList: View {
                         ) {
                             ForEach(orderedFood, id: \.self) { typeFood in
                                 ForEach(typeFood) { food in
-                                    BasketRow(food: food)
+                                    BasketRow(food: food, countBoughtItem: $countBoughtItem)
                                 }
                                 .listRowBackground(Color("DarkGreen").opacity(0.35))
                             } // END FOREACH
                         } // END SECTION
                     } // END IF
-                    
-                    if boughtFood.count > 0 {
+                
+                    if countBoughtItem > 0 {
                         Section(header:
                                     Text("Bought:")
                             .font(.headline)
                             .foregroundColor(Color("MyYellow"))
                         ) {
-                            ForEach(boughtFood, id: \.self) { food in
-                                BasketRow(food: food)
-                            }
-                            .listRowBackground(Color("MyYellow").opacity(0.15))
+                            ForEach(boughtFood, id: \.self) { typeFood in
+                                ForEach(typeFood) { food in
+                                    BasketRow(food: food, countBoughtItem: $countBoughtItem)
+                                }
+                                .listRowBackground(Color("MyYellow"))
+                                } // END FOREACH
                         } // END SECTION
                     } // END IF
                     
@@ -83,7 +86,7 @@ struct BasketList: View {
         )
        
         BasketEmpty()
-            .offset(y: isEmptyBasket() ? 0 : UIScreen.main.bounds.height)
+            .offset(y: (isEmptyBasket() && countBoughtItem == 0) ? 0 : UIScreen.main.bounds.height)
 
         } // END ZSTACK
     } // END BODY
