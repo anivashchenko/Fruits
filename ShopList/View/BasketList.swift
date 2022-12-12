@@ -8,12 +8,12 @@ struct BasketList: View {
     
     @EnvironmentObject var modelData: ModelData
     
-    @State var food: Food = ModelData().fruits[1]
-    @State var typeFood: Food.TypeFood = .fruits
     @State var countBoughtItem: Int = 0
-    @State var showActionSheet: Bool = false
+    @State var food: Food = ModelData().fruits[1]
     @State var isListOneOn: Bool = false
+    @State var showActionSheet: Bool = false
     @State var showAddList: Bool = false
+    @State var typeFood: Food.TypeFood = .fruits
     
     var orderedFruits: [Food] { modelData.fruits.filter { fruit in fruit.isAddedToList }}
     var orderedVegies: [Food] { modelData.vegies.filter { vegetable in vegetable.isAddedToList }}
@@ -23,8 +23,8 @@ struct BasketList: View {
     var boughtVegies: [Food] { modelData.vegies.filter { vegetable in vegetable.isBought }}
     var boughtBerries: [Food] { modelData.berries.filter { berry in berry.isBought }}
     
-    @State var orderedFood: [[Food]] = []
     @State var boughtFood: [[Food]] = []
+    @State var orderedFood: [[Food]] = []
     @State var showAlert: Bool = false
     
     var modelDataType: [Food] {
@@ -72,40 +72,39 @@ struct BasketList: View {
                     if countBoughtItem > 0 && !isListOneOn {
                         Section(header:
                                     Text("Bought:")
-                            .font(.headline)
-                            .foregroundColor(Color("MyYellow"))
+                                        .font(.headline)
+                                        .foregroundColor(Color("MyYellow"))
                         ) {
                             ForEach(boughtFood, id: \.self) { typeFood in
                                 ForEach(typeFood) { food in
                                     BasketRow(food: food, countBoughtItem: $countBoughtItem)
                                 }
                                 .listRowBackground(Color("MyYellow"))
-                                } // END FOREACH
+                            } // END FOREACH
                         } // END SECTION
                     } // END IF
-            } // END LIST
-            .onAppear(perform: getList)
-            .listStyle(.insetGrouped)
-            .navigationTitle("My basket")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    deleteButton
-                }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    settingsButton
-                }
-            } // END TOOLBAR
-        } // END NAV
-        .background(
-            Color("DarkGreen")
-                .opacity(0.5)
-        )
+                } // END LIST
+                .onAppear(perform: getList)
+                .listStyle(.insetGrouped)
+                .navigationTitle("My basket")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        deleteButton
+                    }
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        settingsButton
+                    }
+                } // END TOOLBAR
+            } // END NAV
+            .background(
+                Color("DarkGreen")
+                    .opacity(0.5)
+            )
        
-        BasketEmpty()
-            .offset(y: (isEmptyBasket() && countBoughtItem == 0) ? 0 : UIScreen.main.bounds.height)
-
-    } // END ZSTACK
-} // END BODY
+            BasketEmpty()
+                .offset(y: (isEmptyBasket() && countBoughtItem == 0) ? 0 : UIScreen.main.bounds.height)
+        } // END ZSTACK
+    } // END BODY
     
     var deleteButton: some View {
         Button {
