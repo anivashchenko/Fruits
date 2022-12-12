@@ -7,9 +7,15 @@ import SwiftUI
 struct AddToTheList: View {
     
     @Environment(\.presentationMode) var presentationMode
-
+    @State var topic: Topic = .list
+    
+    enum Topic: String {
+        case basket = "Successfully added to shop list!"
+        case list = "This type of list has already chosen!"
+    }
+    
     var body: some View {
-        Text("Successfully added to shop list!")
+        Text(topic.rawValue)
             .font(.title2)
             .foregroundColor(Color("DarkGreen"))
             .bold()
