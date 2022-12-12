@@ -112,7 +112,7 @@ struct BasketList: View {
     }
     
     func isEmptyBasket() -> Bool {
-        orderedFruits.count == 0 && orderedVegies.count == 0 && orderedBerries.count == 0
+        orderedFruits.isEmpty && orderedVegies.isEmpty && orderedBerries.isEmpty
     }
     
     func getAlert() -> Alert {
