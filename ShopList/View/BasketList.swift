@@ -19,8 +19,12 @@ struct BasketList: View {
     var orderedVegies: [Food] { modelData.vegies.filter { vegetable in vegetable.isAddedToList }}
     var orderedBerries: [Food] { modelData.berries.filter { berry in berry.isAddedToList }}
 
+    var boughtFruit: [Food] { modelData.fruits.filter { fruit in fruit.isBought }}
+    var boughtVegies: [Food] { modelData.vegies.filter { vegetable in vegetable.isBought }}
+    var boughtBerries: [Food] { modelData.berries.filter { berry in berry.isBought }}
+    
     @State var orderedFood: [[Food]] = []
-    @State var boughtFood: [Food] = []
+    @State var boughtFood: [[Food]] = []
     @State var showAlert: Bool = false
     
     var modelDataType: [Food] {
@@ -106,6 +110,7 @@ struct BasketList: View {
     
     func getList() {
         orderedFood = [orderedFruits, orderedVegies, orderedBerries]
+        boughtFood = [boughtFruit, boughtVegies, boughtBerries]
     }
     
     func isEmptyBasket() -> Bool {
