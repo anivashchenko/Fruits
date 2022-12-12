@@ -12,7 +12,7 @@ struct BasketEmpty: View {
                 .fontWeight(.semibold)
                 .foregroundColor(Color("DarkGreen"))
             
-            Text("Please add item in it.")
+            Text("Please add some items in it.")
                 .font(.headline)
                 .foregroundColor(Color("DarkGreen"))
                 .multilineTextAlignment(.center)
