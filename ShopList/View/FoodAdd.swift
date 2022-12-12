@@ -34,21 +34,21 @@ struct FoodAdd: View {
     
     var body: some View {
         ZStack {
-            GeometryReader { geomentry in
                 VStack {
                     Text(food.name)
                         .font(.largeTitle)
                         .bold()
                         .foregroundColor(Color("DarkGreen"))
-                        .frame(maxWidth: .infinity)
+                        .frame(width: UIScreen.main.bounds.width * 0.9)
                         .padding(.vertical, 8)
                         .background(.thinMaterial)
                         .cornerRadius(10)
-                        .offset(y: 20)
                     
                     Image(food.name)
                         .resizable()
                         .scaledToFit()
+                        .frame(width: UIScreen.main.bounds.width * 0.9,
+                            height: UIScreen.main.bounds.height * 0.5)
                         .clipped()
                     
                     Spacer()
@@ -69,13 +69,10 @@ struct FoodAdd: View {
                                   food: modelData.berries[foodIndex])
                     }
                 }
-                .frame(width: geomentry.size.width * 0.8)
-                .offset(x: geomentry.size.width * 0.1)
                 
                 VStack {
                     showAddedScreen ? AddToTheList() : nil
                 } // END VSTACK
-            } // END GEOM
         } // END ZSTACK
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("DarkGreen").opacity(0.5))
