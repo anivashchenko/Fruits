@@ -22,7 +22,7 @@ struct MyTabView: View {
                 }
                 .tag(Tab.category)
             
-            BasketList()
+            BasketList(food: modelData.fruits[1])
                 .tabItem {
                     Label("Basket", systemImage: "basket.fill")
                 }
