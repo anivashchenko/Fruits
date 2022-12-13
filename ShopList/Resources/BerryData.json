@@ -6,7 +6,8 @@
         "isAddedToList": false,
         "isBought": false,
         "isFavorite": false,
-        "typeFood": "berries"
+        "typeFood": "berries",
+        "order": 0
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@
         "isAddedToList": false,
         "isBought": false,
         "isFavorite": false,
-        "typeFood": "berries"
+        "typeFood": "berries",
+        "order": 0
     },
     {
         "id": 3,
@@ -24,6 +26,7 @@
         "isAddedToList": false,
         "isBought": false,
         "isFavorite": false,
-        "typeFood": "berries"
+        "typeFood": "berries",
+        "order": 0
     }
 ]

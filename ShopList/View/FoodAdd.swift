@@ -53,18 +53,21 @@ struct FoodAdd: View {
                         AddButton(isSet: $modelData.fruits[foodIndex].isAddedToList,
                                   showAddedScreen: $showAddedScreen,
                                   countValueSet: $modelData.fruits[foodIndex].countValue,
+                                  order: $modelData.fruits[foodIndex].order,
                                   food: modelData.fruits[foodIndex])
                     }
                     if food.typeFood == .vegies {
                         AddButton(isSet: $modelData.vegies[foodIndex].isAddedToList,
                                   showAddedScreen: $showAddedScreen,
                                   countValueSet: $modelData.vegies[foodIndex].countValue,
+                                  order: $modelData.vegies[foodIndex].order,
                                   food: modelData.vegies[foodIndex])
                     }
                     if food.typeFood == .berries {
                         AddButton(isSet: $modelData.berries[foodIndex].isAddedToList,
                                   showAddedScreen: $showAddedScreen,
                                   countValueSet: $modelData.berries[foodIndex].countValue,
+                                  order: $modelData.berries[foodIndex].order,
                                   food: modelData.berries[foodIndex])
                     }
                 }

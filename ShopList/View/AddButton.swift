@@ -11,6 +11,7 @@ struct AddButton: View {
     @Binding var isSet: Bool
     @Binding var showAddedScreen: Bool
     @Binding var countValueSet: Int
+    @Binding var order: Int
 
     @State var countValue: Int = 0
     @State var food: Food
@@ -30,6 +31,7 @@ struct AddButton: View {
                 if countIsSet() {
                     if isSet == false {
                         modelData.countItem += 1
+                        order = modelData.countItem
                     }
                     isSet = true
                     showAddedScreen = true
@@ -60,7 +62,13 @@ struct AddButton: View {
 
 struct AddButton_Previews: PreviewProvider {
     static var previews: some View {
-        AddButton(isSet: .constant(false), showAddedScreen: .constant(false), countValueSet: .constant(0), food: ModelData().fruits[1])
+        AddButton(
+            isSet: .constant(false),
+            showAddedScreen: .constant(false),
+            countValueSet: .constant(0),
+            order: .constant(1),
+            food: ModelData().fruits[1]
+        )
             .environmentObject(ModelData())
     }
 }

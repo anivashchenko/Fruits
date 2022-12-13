@@ -14,6 +14,7 @@ struct Food: Decodable, Hashable, Identifiable {
     var isBought: Bool
     var isFavorite: Bool
     var typeFood: TypeFood
+    var order: Int
     
     enum TypeFood: String, Decodable {
         case fruits
