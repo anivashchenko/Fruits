@@ -24,6 +24,9 @@ struct BasketList: View {
     var boughtBerries: [Food] { modelData.berries.filter { berry in berry.isBought }}
     
     @State var boughtFood: [[Food]] = []
+    @State var compactBoughtFood: [Food] = []
+    @State var compactOrderedFood: [Food] = []
+    @State var newList: [Food] = []
     @State var orderedFood: [[Food]] = []
     @State var showAlert: Bool = false
     
@@ -45,12 +48,11 @@ struct BasketList: View {
                 List {
                     if isListOneOn {
                         Section {
-                            ForEach(orderedFood, id: \.self) { typeFood in
-                                ForEach(typeFood) { food in
-                                    BasketRow(food: food, countBoughtItem: $countBoughtItem)
-                                }
-                                .listRowBackground(Color("DarkGreen").opacity(0.35))
-                            } // END FOREACH
+                            ForEach(newList, id: \.self) { food in
+                                BasketRow(food: food, countBoughtItem: $countBoughtItem)
+                            }
+                            .onMove(perform: move)
+                            .listRowBackground(Color("DarkGreen").opacity(0.35))
                         } // END SECTION
                     }
                         
@@ -60,12 +62,11 @@ struct BasketList: View {
                             .font(.headline)
                             .foregroundColor(Color("DarkGreen"))
                         ) {
-                            ForEach(orderedFood, id: \.self) { typeFood in
-                                ForEach(typeFood) { food in
-                                    BasketRow(food: food, countBoughtItem: $countBoughtItem)
-                                }
-                                .listRowBackground(Color("DarkGreen").opacity(0.35))
-                            } // END FOREACH
+                            ForEach(compactOrderedFood, id: \.self) { food in
+                                BasketRow(food: food, countBoughtItem: $countBoughtItem)
+                            }
+                            .onMove(perform: move)
+                            .listRowBackground(Color("DarkGreen").opacity(0.35))
                         } // END SECTION
                     } // END IF
                     
@@ -75,12 +76,11 @@ struct BasketList: View {
                                         .font(.headline)
                                         .foregroundColor(Color("MyYellow"))
                         ) {
-                            ForEach(boughtFood, id: \.self) { typeFood in
-                                ForEach(typeFood) { food in
-                                    BasketRow(food: food, countBoughtItem: $countBoughtItem)
-                                }
-                                .listRowBackground(Color("MyYellow"))
-                            } // END FOREACH
+                            ForEach(compactBoughtFood, id: \.self) { food in
+                                BasketRow(food: food, countBoughtItem: $countBoughtItem)
+                            }
+                            .onMove(perform: move)
+                            .listRowBackground(Color("MyYellow"))
                         } // END SECTION
                     } // END IF
                 } // END LIST
@@ -137,7 +137,22 @@ struct BasketList: View {
     
     func getList() {
         orderedFood = [orderedFruits, orderedVegies, orderedBerries]
+        compactOrderedFood = orderedFood.flatMap { $0 }
         boughtFood = [boughtFruit, boughtVegies, boughtBerries]
+        compactBoughtFood = boughtFood.flatMap { $0 }
+        
+        newList.append(contentsOf: compactOrderedFood)
+        newList.append(contentsOf: compactBoughtFood)
+
+        var unique: [Food] = []
+        for food in newList {
+            if unique.contains(food) {
+                let id = unique.firstIndex { $0 == food }
+                unique.remove(at: id ?? 0)
+            }
+            unique.append(food)
+        }
+        newList = unique
     }
     
     func isEmptyBasket() -> Bool {
