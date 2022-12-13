@@ -58,13 +58,13 @@ struct FoodAdd: View {
                     if food.typeFood == .vegies {
                         AddButton(isSet: $modelData.vegies[foodIndex].isAddedToList,
                                   showAddedScreen: $showAddedScreen,
-                                  countValueSet: $modelData.fruits[foodIndex].countValue,
+                                  countValueSet: $modelData.vegies[foodIndex].countValue,
                                   food: modelData.vegies[foodIndex])
                     }
                     if food.typeFood == .berries {
                         AddButton(isSet: $modelData.berries[foodIndex].isAddedToList,
                                   showAddedScreen: $showAddedScreen,
-                                  countValueSet: $modelData.fruits[foodIndex].countValue,
+                                  countValueSet: $modelData.berries[foodIndex].countValue,
                                   food: modelData.berries[foodIndex])
                     }
                 }

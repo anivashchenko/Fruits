@@ -14,7 +14,6 @@ struct AddButton: View {
 
     @State var countValue: Int = 0
     @State var food: Food
-    @State var typeFood: Food.TypeFood = .fruits
     
     func setCount() {
         countValue = food.countValue
