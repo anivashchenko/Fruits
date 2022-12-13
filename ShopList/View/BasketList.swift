@@ -176,23 +176,31 @@ struct BasketList: View {
     }
     
     func removeAll() {
-        let compactOrderedFood = orderedFood.flatMap { $0 }
-        for food in compactOrderedFood {
+        getList()
+        
+        for food in newList {
             if food.typeFood == .fruits {
                 let foodIndex = modelData.fruits.firstIndex { $0.id == food.id }!
                 modelData.fruits[foodIndex].isAddedToList = false
+                modelData.fruits[foodIndex].isBought = false
                 modelData.fruits[foodIndex].countValue = 0
             } else if food.typeFood == .vegies {
                 let foodIndex = modelData.vegies.firstIndex { $0.id == food.id }!
                 modelData.vegies[foodIndex].isAddedToList = false
-                modelData.fruits[foodIndex].countValue = 0
+                modelData.vegies[foodIndex].isBought = false
+                modelData.vegies[foodIndex].countValue = 0
             } else {
                 let foodIndex = modelData.berries.firstIndex { $0.id == food.id }!
                 modelData.berries[foodIndex].isAddedToList = false
-                modelData.fruits[foodIndex].countValue = 0
+                modelData.berries[foodIndex].isBought = false
+                modelData.berries[foodIndex].countValue = 0
             }
         }
         modelData.countItem = 0
+        countBoughtItem = 0
+        orderedFood = []
+        boughtFood = []
+        newList = []
     } // END FUNC
 }
 
