@@ -151,7 +151,8 @@ struct BasketList: View {
     }
     
     func isEmptyBasket() -> Bool {
-        orderedFruits.isEmpty && orderedVegies.isEmpty && orderedBerries.isEmpty
+        orderedFood = [orderedFruits, orderedVegies, orderedBerries]
+        return orderedFood.isEmpty
     }
     
     func getActionSheet() -> ActionSheet {
