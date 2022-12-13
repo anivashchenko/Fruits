@@ -29,18 +29,6 @@ struct BasketList: View {
     @State var newList: [Food] = []
     @State var orderedFood: [[Food]] = []
     @State var showAlert: Bool = false
-    
-    var modelDataType: [Food] {
-        get {
-            if food.typeFood == .fruits {
-                return modelData.fruits
-            } else if food.typeFood == .vegies {
-                return modelData.vegies
-            } else {
-                return modelData.berries
-            }
-        }
-    }
         
     var body: some View {
         ZStack {
