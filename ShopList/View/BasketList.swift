@@ -76,10 +76,13 @@ struct BasketList: View {
                 .listStyle(.insetGrouped)
                 .navigationTitle("My basket")
                 .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        EditButton()
+                    }
+                    ToolbarItem() {
                         deleteButton
                     }
-                    ToolbarItem(placement: .navigationBarTrailing) {
+                    ToolbarItem() {
                         settingsButton
                     }
                 } // END TOOLBAR
@@ -121,6 +124,10 @@ struct BasketList: View {
         .sheet(isPresented: $showAddList) {
             InformationScreen(delay: 2, topic: .list)
         }
+    }
+        
+    func move(indices: IndexSet, newOffset: Int) {
+        newList.move(fromOffsets: indices, toOffset: newOffset)
     }
     
     func getList() {
