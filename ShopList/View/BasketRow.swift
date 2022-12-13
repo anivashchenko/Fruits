@@ -35,8 +35,9 @@ struct BasketRow: View {
                 .swipeActions(
                     edge: .trailing) {
                         Button {
-//                            food.isAddedToList = false
-//                            food.countValue = 0
+                            food.isAddedToList = false
+                            food.isBought = false
+                            food.countValue = 0
                             remove(type: food.typeFood, id: food.id)
                         } label: {
                             Image(systemName: "trash.fill")
@@ -85,13 +86,13 @@ struct BasketRow: View {
         } else if type == .vegies {
             let foodIndex = modelData.vegies.firstIndex { $0.id == id }!
             modelData.vegies[foodIndex].isAddedToList = false
-            modelData.fruits[foodIndex].isBought = false
-            modelData.fruits[foodIndex].countValue = 0
+            modelData.vegies[foodIndex].isBought = false
+            modelData.vegies[foodIndex].countValue = 0
         } else {
             let foodIndex = modelData.berries.firstIndex { $0.id == id }!
             modelData.berries[foodIndex].isAddedToList = false
-            modelData.fruits[foodIndex].isBought = false
-            modelData.fruits[foodIndex].countValue = 0
+            modelData.berries[foodIndex].isBought = false
+            modelData.berries[foodIndex].countValue = 0
         }
         
         modelData.countItem -= 1
