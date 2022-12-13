@@ -13,7 +13,7 @@ struct BasketRow: View {
 
     var body: some View {
         HStack {
-            if food.isBought {
+            if food.isBought || !food.isAddedToList {
                 Image(systemName: "checkmark.square.fill")
                     .font(.title)
                     .foregroundColor(.white)
