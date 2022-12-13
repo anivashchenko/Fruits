@@ -93,7 +93,7 @@ struct BasketList: View {
             )
        
             BasketEmpty()
-                .offset(y: (isEmptyBasket() && countBoughtItem == 0) ? 0 : UIScreen.main.bounds.height)
+                .offset(y: modelData.countItem == 0 ? 0 : UIScreen.main.bounds.height)
         } // END ZSTACK
     } // END BODY
     
