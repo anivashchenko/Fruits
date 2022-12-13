@@ -62,28 +62,41 @@ struct BasketRow: View {
             food.isBought.toggle()
             food.isAddedToList ? (countBoughtItem += 1) : (countBoughtItem -= 1)
             food.isAddedToList.toggle()
+            listAndBoughtToggle(type: food.typeFood, id: food.id)
         }
     }
     
     func remove(type: Food.TypeFood, id: Int) {
+        listAndBoughtToggle(type: type, id: id)
+        
         if type == .fruits {
             let foodIndex = modelData.fruits.firstIndex { $0.id == id }!
-            modelData.fruits[foodIndex].isAddedToList = false
-            modelData.fruits[foodIndex].isBought = false
             modelData.fruits[foodIndex].countValue = 0
         } else if type == .vegies {
             let foodIndex = modelData.vegies.firstIndex { $0.id == id }!
-            modelData.vegies[foodIndex].isAddedToList = false
-            modelData.vegies[foodIndex].isBought = false
             modelData.vegies[foodIndex].countValue = 0
         } else {
             let foodIndex = modelData.berries.firstIndex { $0.id == id }!
-            modelData.berries[foodIndex].isAddedToList = false
-            modelData.berries[foodIndex].isBought = false
             modelData.berries[foodIndex].countValue = 0
         }
         
         modelData.countItem -= 1
+    }
+    
+    func listAndBoughtToggle(type: Food.TypeFood, id: Int) {
+        if type == .fruits {
+            let foodIndex = modelData.fruits.firstIndex { $0.id == id }!
+            modelData.fruits[foodIndex].isAddedToList = false
+            modelData.fruits[foodIndex].isBought = false
+        } else if type == .vegies {
+            let foodIndex = modelData.vegies.firstIndex { $0.id == id }!
+            modelData.vegies[foodIndex].isAddedToList = false
+            modelData.vegies[foodIndex].isBought = false
+        } else {
+            let foodIndex = modelData.berries.firstIndex { $0.id == id }!
+            modelData.berries[foodIndex].isAddedToList = false
+            modelData.berries[foodIndex].isBought = false
+        }
     }
     
 }
