@@ -26,26 +26,20 @@ struct BasketRow: View {
             Text(food.name)
             Text("x\(food.countValue)")
                 .foregroundColor(Color(uiColor: .darkGray))
+            
+            Text("B - \(food.isBought ? "T" : "F")")
+                .font(.caption)
+            Text("L - \(food.isAddedToList ? "T" : "F")")
+                .font(.caption)
+            Text("O - \(food.order)")
+                .font(.caption)
+            
             Spacer()
             Image(systemName: "star.fill")
                 .foregroundColor(food.isFavorite ? .yellow : nil)
                 .onTapGesture() {
                     food.isFavorite.toggle()
                 }
-                .swipeActions(
-                    edge: .trailing) {
-                        Button {
-                            food.isAddedToList = false
-                            food.isBought = false
-                            food.countValue = 0
-                            remove(type: food.typeFood, id: food.id)
-                        } label: {
-                            Image(systemName: "trash.fill")
-                                .foregroundColor(.white)
-                                .padding(10)
-                        }
-                        .tint(.red)
-                    }
                 .swipeActions(
                     edge: .leading) {
                         Button {
@@ -64,23 +58,6 @@ struct BasketRow: View {
             food.isAddedToList.toggle()
             listAndBoughtToggle(type: food.typeFood, id: food.id)
         }
-    }
-    
-    func remove(type: Food.TypeFood, id: Int) {
-        listAndBoughtToggle(type: type, id: id)
-        
-        if type == .fruits {
-            let foodIndex = modelData.fruits.firstIndex { $0.id == id }!
-            modelData.fruits[foodIndex].countValue = 0
-        } else if type == .vegies {
-            let foodIndex = modelData.vegies.firstIndex { $0.id == id }!
-            modelData.vegies[foodIndex].countValue = 0
-        } else {
-            let foodIndex = modelData.berries.firstIndex { $0.id == id }!
-            modelData.berries[foodIndex].countValue = 0
-        }
-        
-        modelData.countItem -= 1
     }
     
     func listAndBoughtToggle(type: Food.TypeFood, id: Int) {
